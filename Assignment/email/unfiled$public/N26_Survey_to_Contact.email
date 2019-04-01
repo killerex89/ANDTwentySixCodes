@@ -1,0 +1,12 @@
+<messaging:emailTemplate subject="Thank you for using N26!" recipientType="Contact" relatedToType="Contact" language="{!CASE(relatedTo.Language__c,'en','en','de','de','EN')}">
+    <messaging:htmlEmailBody >
+        <html>
+        <body>
+            <p>Hey {!relatedTo.firstname}, {!$Label.FillSurvey}  : "​http://n26.com/survey/{!relatedTo.id}" </p>
+                    <a href = 
+                        "​http://n26.com/survey/{!relatedTo.id}">
+                    </a>
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>
